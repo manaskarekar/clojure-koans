@@ -38,5 +38,7 @@
 
   "All together now!"
   (= "Test Testerson, 123 Test Lane, Testerville, TX"
-     ((fn [ & [[test testerson] {:keys [street-address city state]}]] (str test " " testerson ", " street-address ", " city ", " state)) ["Test" "Testerson"] test-address)))
+     ((fn [[test testerson]
+     		{:keys [street-address city state]}] (str test " " testerson ", " street-address ", " city ", " state)) 
+     	 ["Test" "Testerson"] test-address)))
 
